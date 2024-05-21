@@ -1,0 +1,267 @@
+*{
+    font-family: 'Lato';
+    font-style: normal;
+}
+body{
+    padding: 25px 100px ;
+}
+#title{
+    margin-top: 6px;
+    font-size: 44px;
+}
+.content-header{
+    display: flex;
+    justify-content: center;
+    color: #D04F4F;
+}
+
+img{
+    display: block;
+    margin: 0px auto;
+}
+
+#barreDeRecherche{
+    width: 100%;
+    background: #E7E7E7;
+    margin-bottom: 15px;
+}
+.inputRecherche{
+    border-radius: 5px;
+    border: none;
+    height: 55px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+
+    &:focus + .picto-anime{
+    
+        font-size: 18px;
+        transform: rotate(0deg);
+
+    }
+
+    &__filter{
+        text-align: left;
+        padding-left: 10px;
+        width: 100%;
+        &__ingredients{
+            background: #3282F7;
+        }
+        &__appareils{
+            background: #68D9A4;
+        }
+        &__outils{
+            background: #ED6454;
+        }
+    }
+}
+
+.inputRecherche::placeholder{
+    padding-left: 10px;
+}
+.inputRecherche__filter::placeholder, ul{
+    color: #fff;
+    opacity: 1;
+}
+.all_recipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__articles{
+        width: 30%;
+        background-color: #E7E7E7;
+        margin-bottom: 50px;
+        height: 364px;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-radius: 5px;
+        @media all and (max-width:992px) {
+            width: 46%;
+        }
+        @media all and (max-width:770px) {
+            width: 100%;
+        }
+        
+        &__images{
+            width: 100%;
+            height: 178px;
+            background-color: #C7BEBE;
+        }
+        &__nomRecette{
+            position: absolute;
+            left: 5.26%;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 62%;
+        }
+        &__picto{
+            position: absolute;
+            top: 54%;
+            right: 22%;
+            bottom: 26.67%;
+        }
+        &__dures{
+            position: absolute;
+            right: 5.26%;
+            top: 48%;
+            bottom: 26.67%;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__ingredients{
+            position: absolute;
+            left: 5.26%;
+            right: 49.74%;
+            top: 62%;
+            bottom: -16.33%;
+            margin: 0px;
+            height: 30%;
+            font-weight: 400;
+            font-size: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &__nameIngredient{
+                font-weight: 700;
+            }
+        }
+        &__descritpion{
+            position: absolute;
+            left: 55.26%;
+            right: 4.74%;
+            top: 63%;
+            bottom: -16.33%;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 100%;
+            height: 29%;
+            margin: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+.allFilter{
+    margin-bottom: 30px;
+    display: flex;
+    &__box{
+        margin-right: 15px;
+        position: relative;
+    }
+}
+
+.picto-anime{
+        
+    transform: rotate(-180deg);
+    transition: transform 700ms ease-in-out;
+    
+}
+
+.dropdownIngredients{
+    background: #3282F7;
+    display: none; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    border-radius: 0 0 5px 5px;
+    width: 667px;
+    height: 397px;
+}
+.dropdownAppareils{
+    background: #68D9A4;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    border-radius: 0 0 5px 5px;
+    width: 300px;
+    height: 230px;
+}
+.dropdownUstensiles{
+    background: #ED6454;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    border-radius: 0 0 5px 5px;
+    width: 667px;
+    height: 300px;
+}
+.allFilter{
+    display: flex;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+}
+.ingredientListe{
+    margin-bottom: 10px;
+    margin-right: 15px;
+    width: 33%;
+}
+
+.allTag{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.tag{
+    border-radius: 5px;
+    height: 37px;
+    border: none;
+    font-family: 'Lato';
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 15px;
+    text-align: left;
+}
+.fa-search{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+}
+.fa-chevron-down{
+    position: absolute;
+    color: #fff;
+    top: 22px;
+    right: 5px;
+}
+.fa-times-circle-o{
+    margin-left: 10px;
+}
+
+.erreur-search{
+    color: #D04F4F;
+    margin-top: 5px;
+    font-style: italic;
+}
+.errorIngredient{
+    padding-left: 15px;
+    margin: 0px;
+    color: #fff;
+    background-color: #3282F7;
+}
+.errorAppareil{
+    padding-left: 15px;
+    margin: 0px;
+    color: #fff;
+    background-color: #68D9A4;
+}
+.errorUstensile{
+    padding-left: 15px;
+    margin: 0px;
+    color: #fff;
+    background-color: #ED6454;
+}
